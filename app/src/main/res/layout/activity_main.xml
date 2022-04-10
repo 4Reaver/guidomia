@@ -44,6 +44,24 @@
                     android:textStyle="bold"
                     tools:ignore="RtlHardcoded" />
 
+                <FrameLayout
+                    android:id="@+id/fl_menu_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_menu_24"
+                        android:contentDescription="@string/menu_button"/>
+
+                </FrameLayout>
+
             </FrameLayout>
 
         </androidx.appcompat.widget.Toolbar>
