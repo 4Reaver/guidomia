@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/tv_header_text"
-                android:layout_marginLeft="@dimen/default_horizontal_padding"
+                android:layout_marginLeft="@dimen/default_padding"
                 android:text="@string/header_title"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -44,8 +44,8 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginLeft="@dimen/default_horizontal_padding"
-                android:layout_marginBottom="@dimen/default_horizontal_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
                 android:text="@string/header_text"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -53,6 +53,11 @@
                 tools:ignore="RtlHardcoded" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

@@ -30,8 +30,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/orange"
-                android:paddingLeft="@dimen/default_horizontal_padding"
-                android:paddingRight="@dimen/default_horizontal_padding"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding"
                 tools:ignore="RtlHardcoded">
 
                 <TextView
