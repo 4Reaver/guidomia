@@ -67,6 +67,7 @@
         android:layout_marginLeft="@dimen/rating_star_padding_negative"
         android:progressDrawable="@drawable/ratingbar_selector"
         android:isIndicator="true"
+        android:stepSize="1"
         android:numStars="5"
         tools:rating="3"
         tools:ignore="RtlHardcoded" />

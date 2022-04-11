@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-anydpi/ic_baseline_menu_24.xml" value="0.2545" />
+        <entry key="app/src/main/res/drawable-anydpi/items_separator.xml" value="0.2545" />
         <entry key="app/src/main/res/drawable/filled.xml" value="0.217" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.217" />
         <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1875" />
