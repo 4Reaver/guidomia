@@ -36,13 +36,16 @@
 
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/gl_text"
+        app:layout_constraintRight_toRightOf="parent"
         android:textSize="22sp"
         android:textColor="@color/text_black_45"
         android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
         tools:text="Alpine Roadster"/>
 
     <TextView

@@ -1,5 +1,6 @@
 package app.test.guidomia.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,7 +8,7 @@ import app.test.guidomia.R
 import app.test.guidomia.data.Car
 import app.test.guidomia.databinding.ItemCarBinding
 
-class CarsAdapter(private val dataset: Array<Car>) : RecyclerView.Adapter<CarsAdapter.ViewHolder>() {
+class CarsAdapter(private var dataset: Array<Car>) : RecyclerView.Adapter<CarsAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemCarBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
@@ -19,6 +20,12 @@ class CarsAdapter(private val dataset: Array<Car>) : RecyclerView.Adapter<CarsAd
     }
 
     override fun getItemCount() = dataset.size
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateData(array: Array<Car>) {
+        dataset = array
+        notifyDataSetChanged()
+    }
 
     class ViewHolder(private val binding: ItemCarBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(car: Car) {

@@ -2,6 +2,7 @@ package app.test.guidomia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -20,16 +21,27 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val adapter = CarsAdapter(emptyArray())
+
+        ContextCompat.getDrawable(baseContext, R.drawable.items_separator)?.let {
+            val decoration = CustomDividerItemDecoration(baseContext, DividerItemDecoration.VERTICAL)
+
+            decoration.setDrawable(it)
+            binding.contentMain.rvList.addItemDecoration(decoration)
+        }
         binding.contentMain.rvList.layoutManager = LinearLayoutManager(baseContext)
-        val decoration = CustomDividerItemDecoration(baseContext, DividerItemDecoration.VERTICAL)
-        decoration.setDrawable(ContextCompat.getDrawable(baseContext, R.drawable.items_separator)!!)
-        binding.contentMain.rvList.addItemDecoration(decoration)
+        binding.contentMain.rvList.adapter = adapter
 
         viewModel.cars.observe(this) {
             it?.let {
-                binding.contentMain.rvList.adapter = CarsAdapter(it)
+                adapter.updateData(it)
             }
         }
+    }
 
+    override fun onPostCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onPostCreate(savedInstanceState, persistentState)
+
+        binding.contentMain.nsvContentRoot.scrollTo(0,0)
     }
 }
