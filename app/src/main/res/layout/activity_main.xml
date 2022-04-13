@@ -42,6 +42,7 @@
                     android:textSize="22sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
+                    app:fontFamily="@font/stencil_std_bold"
                     tools:ignore="RtlHardcoded" />
 
                 <FrameLayout
