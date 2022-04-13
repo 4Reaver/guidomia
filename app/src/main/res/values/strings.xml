@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Guidomia</string>
+
+    <string name="header_title">Tacoma 2021</string>
+    <string name="header_text">Get your\'s now</string>
+    <string name="main_header">main header image</string>
+    <string name="menu_button">menu button</string>
+    <string name="car_image">car image</string>
+    <string name="car_name">%1$s %2$s</string>
+    <string name="car_price">Price : %s</string>
 </resources>
